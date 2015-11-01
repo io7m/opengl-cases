@@ -77,7 +77,7 @@ public final class VAOReferencesVBO
         System.out.printf("Deleting VBO %d\n", aid);
 
         cache.rewind();
-        cache.put(1, aid);
+        cache.put(0, aid);
         g.glDeleteBuffers(1, cache);
 
         if (leak) {
@@ -85,7 +85,7 @@ public final class VAOReferencesVBO
         } else {
           System.out.printf("Deleting VAO %d\n", vao);
           cache.rewind();
-          cache.put(1, vao);
+          cache.put(0, vao);
           g.glDeleteVertexArrays(1, cache);
         }
 
